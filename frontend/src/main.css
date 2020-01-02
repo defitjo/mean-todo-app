@@ -1,0 +1,37 @@
+.create-list-span {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.fa-trash, .fa-times {
+    color: #e99895
+}
+
+.fa-trash:hover, .fa-times:hover {
+    cursor: pointer;
+    color: #d9534f;
+}
+
+.fa-check {
+    color: #94dd94;
+    padding-right: 5px;
+    margin-left: -15px;
+}
+
+.fa-check:hover {
+    cursor: pointer;
+    color: #5cb85c;
+}
+
+.todo-description {
+    margin-right: 26px;
+}
+
+.todo-submit {
+    margin-left: 5px;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: .6;
+}

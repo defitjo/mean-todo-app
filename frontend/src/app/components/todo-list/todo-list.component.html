@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-brand mb-0 h1">Todo App</span>
+</nav>
+
+<div class="container title-list p-3 my-3 border">
+  <h3 class="display-4 text-center pb-3">My Todos</h3>
+  <div class="text-center pb-5">
+    <span class="create-list-span">Create a new list</span>
+    <button class="btn btn-outline-primary btn-sm" routerLink="/create-list">
+      <fa-icon class="fa-list" [icon]="faListAlt"></fa-icon>
+      Go!
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-5 mb-5">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" *ngFor="let title of titles" [routerLink]="['/title', title._id]" routerLinkActive="is-active">
+          <a>{{ title.description }}</a>
+          <span (click)="deleteAList(title)">
+            <fa-icon class="fa-trash" [icon]="faTrashAlt"></fa-icon>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-sm-7">
+      <h5 class="d-flex justify-content-center mb-3">Todos To Complete</h5>
+      <div class="todos" *ngFor="let todo of todos">
+        <p class="d-flex justify-content-between">
+          <span class="todo-description" [class.complete]="todo.completed">{{ todo.description }}</span>
+          <span class="pull-right todo-delete btn-rounded-corners" >
+            <fa-icon class="fa-check" [icon]="faCheck" (click)="onTodoClick(todo)"></fa-icon>
+            <fa-icon class="fa-times" [icon]="faTimes" (click)="deleteATodo(todo)"></fa-icon>
+          </span>
+        </p>
+      </div>
+
+      <app-add-todo></app-add-todo>
+
+    </div>
+  </div>
+</div>

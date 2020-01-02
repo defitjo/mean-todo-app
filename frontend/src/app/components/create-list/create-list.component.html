@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-8">
+      <div class="form-group">
+        <h4 class="text-center mt-5 mb-3">Add List</h4>
+        <input #titleInput type="text" id="add-list" class="form-control has-background-light mb-3" placeholder="Name"
+          required>
+        <a class="go-back-link mr-3" routerLink='/'>Go Back</a>
+        <button type="submit" class="btn btn-primary list-submit" (click)="createAList(titleInput.value)">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<form class="form-inline">
+  <div class="form-group col-sm-7 d-flex justify-content-center">
+    <input #todoInput type="text" id="add-todo" class="form-control has-background-light" placeholder="Enter A Todo" required>
+    <button type="submit" class="btn btn-primary todo-submit" (click)="addATodo(todoInput.value)">Add</button>
+  </div>
+</form>
